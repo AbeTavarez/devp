@@ -26,7 +26,7 @@ export default function Home() {
         <div className="flex justify-center items-center">
           <input
             type="text"
-            className="mr-auto w-80 self-center p-1 shadow-sm border border-2 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-purple-400 rounded-md"
+            className="mr-auto w-80 self-center p-1 shadow-sm border-2 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-purple-400 rounded-md"
             placeholder="say hi back"
           />
           <Link
