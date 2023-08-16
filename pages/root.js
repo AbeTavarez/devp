@@ -10,7 +10,7 @@ export default function Root() {
     <main
       className={`grid grid-cols-[0.5fr_2fr] p-10 w-screen h-screen overflow-hidden relative dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col`}
     >
-      <section className="w-52 mr-5 border-r px-2">
+      <section className="w-auto border-r px-2">
         <h1 className="text-2xl text-yellow-400 font-bold mb-5 underline">About</h1>
 
         <h1 className="text-xl text-yellow-400 font-bold mb-5">
@@ -41,11 +41,11 @@ export default function Root() {
         </p>
       </section>
 
-      <section>
+      <section className="max-w-5xl  p-10">
         <h1 className="text-2xl text-yellow-400 font-bold my-10 underline animate-bounce">
           WhoAmI
         </h1>
-        <div className="mr-2">
+        <div className="">
           <Image
             width={200}
             src={MyPhoto}
