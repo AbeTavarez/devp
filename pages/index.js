@@ -5,6 +5,7 @@ import Link from "next/link";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  
   return (
     <main
       className={`flex justify-center items-center w-screen h-screen overflow-hidden relative bg-gradient-to-r from-indigo-800 to-indigo-500`}
@@ -23,15 +24,16 @@ export default function Home() {
           <code className="text-green-500">$ </code>
           Welcome to my page, I hope you have a pleasant experience.
         </p>
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center items-center flex-col sm:flex-row">
           <input
             type="text"
-            className="mr-auto w-80 self-center p-1 shadow-sm border-2 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-purple-400 rounded-md"
-            placeholder="say hi back"
+            className="mr-auto w-80 self-center p-1 shadow-sm border-2 focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 text-purple-400 rounded-md mb-5 sm:mb-0"
+            placeholder="type and press enter or use the mouse --- >"
+            onKeyDown={(e) => e.key === 'Enter' && (window.location = '/root')}
           />
           <Link
-            href="/home"
-            className=" bg-violet-600 hover:bg-violet-900 py-2 px-4 rounded-md  text-bold "
+            href="/root"
+            className=" bg-violet-500 hover:bg-violet-700 py-2 px-4 rounded-md  text-bold transition-all duration-500 rotate-12 hover:rotate-[-12deg] shadow-md shadow-white"
           >
             Enter
           </Link>
