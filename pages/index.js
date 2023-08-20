@@ -55,7 +55,7 @@ export default function Home() {
           />
 
           <div className="m-5">
-            <p className="font-medium">
+            <p className="font-medium mt-10">
               Welcome, I&apos;m glad you made it here! My name is Abraham E.
               Tavarez. I love movies, video games, coding and on my days off I
               do all kinds of sports. Grew up in New York City, and I currently

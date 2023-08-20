@@ -50,10 +50,10 @@ export const AppLayout = ({ children }) => {
 
         <nav className="mt-10">
           <h3 className="mb-1 text-xl">Abraham Tavarez</h3>
-         <nav className="flex justify-evenly">
+         <nav className="flex justify-evenly items-center">
          <Link
-            className="font-bold border-b rounded-t-sm px-5 py-2 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
-            href="/home"
+            className="font-bold border-b p-1 px-5 py-2 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
+            href="/"
           >
             Home
           </Link>
