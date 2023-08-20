@@ -43,7 +43,7 @@ export default function Home() {
 
       {/* WHOAMI SECTION  */}
       <section className="max-w-5xl  p-10">
-        <h1 className="text-2xl font-bold my-10 underline animate-bounce">
+        <h1 className="text-2xl font-bold my-10 underline">
           WhoAmI
         </h1>
         <div className="">
@@ -51,7 +51,7 @@ export default function Home() {
             width={200}
             src={MyPhoto}
             alt="my photo"
-            className="rounded-full hover:scale-75 hover:skew-x-12 transition-all border-4 border-white  mr-3 mb-1  float-left shadow-xl  shadow-zinc-950"
+            className="rounded-full hover:scale-75 transition-all border-4 border-white  mr-3 mb-1  float-left shadow-xl  shadow-zinc-950  hover:skew-x-12 hover:border-yellow-300"
           />
 
           <div className="m-5">
@@ -84,7 +84,7 @@ export default function Home() {
             <h2 className="mt-10 font-bold text-xl text-center">
               Social Links
             </h2>
-            <div className="mt-5 flex justify-evenly">
+            <div className="mt-5 flex justify-evenly hover:animate-bounce transition-all">
               <Link
                 href="https://www.linkedin.com/in/abrahametavarez/"
                 target="_blank"
@@ -102,7 +102,7 @@ export default function Home() {
               <Link
                 href="https://www.youtube.com/channel/UCsKM1yW-g1VRsC1kcspXegQ"
                 target="_blank"
-                className="hover:text-slate-500 "
+                className="hover:text-slate-500"
               >
                 <FaYoutube size={"38"} />
               </Link>
