@@ -8,6 +8,12 @@
   --background-end-rgb: 255, 255, 255;
 }
 
+@layer components {
+  .btn {
+    @apply bg-violet-400 font-bold border-b p-1 hover:translate-x-2 mt-2 dark:bg-slate-500 w-[50%]
+  }
+}
+
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -34,3 +40,4 @@ body {
 .toggle-checkbox:checked + .toggle-label {
   background: #68d391;
 }
+

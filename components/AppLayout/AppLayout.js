@@ -4,29 +4,28 @@ import Image from "next/image";
 import MyPhoto from "../../public/efren-tavarez-aws-nyc-Abraham-Tavarez-1000x978.png";
 
 export const AppLayout = ({ children }) => {
-
   // handle dark mode
   const toggleRef = useRef();
   const handleChange = () => {
     if (toggleRef.current.checked) {
       toggleRef.current.style.right = 0;
-      toggleRef.current.style.left = '';
-      document.documentElement.classList.add('dark')
+      toggleRef.current.style.left = "";
+      document.documentElement.classList.add("dark");
     } else {
-      document.documentElement.classList.remove('dark')
+      document.documentElement.classList.remove("dark");
       toggleRef.current.style.left = 0;
-      toggleRef.current.style.right = '';
+      toggleRef.current.style.right = "";
     }
-  }
+  };
   return (
-    <div className="grid grid-cols-[300px_1fr] h-screen max-h-screen">
-      <div className="p-3 font-mono">
+    <div className="h-full max-h-screen max-w-screen transition-all">
+      <div className="p-3 font-mono bg-gradient-to-t from-slate-500 to-slate-700">
         <div className="m-2 flex justify-between">
           <Image
             width={100}
             src={MyPhoto}
             alt="my photo"
-            className="rounded-full hover:scale-75 hover:skew-x-12 transition-all border-4 border-white mr-5 object-cover"
+            className="rounded-full hover:scale-75 hover:skew-x-12 transition-all border-4 border-white mr-5 object-cover shadow-xl  shadow-zinc-950"
           />
 
           {/* TOGGLE BUTTON  */}
@@ -41,49 +40,49 @@ export const AppLayout = ({ children }) => {
             />
             <label
               for="toggle"
-              class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"  
+              class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
             ></label>
-          <label for="toggle" class="text-xs text-yellow-400">
-            Dark Mode
-          </label>
+            <label for="toggle" class="text-xs text-yellow-400">
+              Dark Mode
+            </label>
           </div>
         </div>
-        <h4 className="text-3xl font-bold mt-5 text-indigo-500 tracking-wide  shadow-md shadow-indigo-400 p-2 hover:shadow-lg hover:shadow-indigo-400 hover:text-white hover:cursor-pointer">
-          <Link href="/root">Abraham E. Tavarez</Link>
-        </h4>
-        <nav className="mt-10 flex flex-col">
-          <h3 className="mb-1 text-xl text-yellow-400">Directory</h3>
-          <Link
-            className="bg-violet-400 font-bold border-b rounded-t-sm p-1 hover:translate-x-2 mt-2 dark:bg-slate-500"
-            href="/root"
+
+        <nav className="mt-10">
+          <h3 className="mb-1 text-xl">Abraham Tavarez</h3>
+         <nav className="flex justify-evenly">
+         <Link
+            className="font-bold border-b rounded-t-sm px-5 py-2 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
+            href="/home"
           >
-            /Root
+            Home
           </Link>
 
           <Link
-            className="bg-violet-400 font-bold border-b p-1 hover:translate-x-2 mt-2 dark:bg-slate-500"
+            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
             href="/projects"
           >
-            /Projects
+            Projects
           </Link>
           <Link
-            className="bg-violet-400 font-bold border-b p-1 hover:translate-x-2 mt-2 dark:bg-slate-500"
+            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
             href="/resources"
           >
-            /Resources
+            Resources
           </Link>
           <Link
-            className="bg-violet-400 font-bold border-b p-1 hover:translate-x-2 mt-2 dark:bg-slate-500"
+            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
             href="/blogs"
           >
-            /Blogs
+            Blogs
           </Link>
           <Link
-            className="bg-violet-400 font-bold border-b p-1 hover:translate-x-2 mt-2 dark:bg-slate-500"
-            href="/message"
+            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
+            href="/contact"
           >
-            /Message
+            Contact
           </Link>
+         </nav>
         </nav>
       </div>
       {children}
