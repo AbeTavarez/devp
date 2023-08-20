@@ -51,7 +51,7 @@ export default function Home() {
             width={200}
             src={MyPhoto}
             alt="my photo"
-            className="rounded-full hover:scale-75 transition-all border-4 border-white  mr-3 mb-1  float-left shadow-xl  shadow-zinc-950  hover:skew-x-12 hover:border-yellow-300"
+            className="rounded-full hover:scale-75 transition-all border-4 border-white  mr-3 mb-1  float-left shadow-xl  shadow-zinc-950  hover:skew-x-12 hover:border-slate-500"
           />
 
           <div className="m-5">
@@ -69,7 +69,7 @@ export default function Home() {
           <h2 className="text-xl font-bold my-1">Professional Summary</h2>
           <p className="font-medium">
             Experienced React Frontend Developer with a passion for crafting
-            dynamic and visually appealing user interfaces.Proficient in
+            dynamic and visually appealing user interfaces. Proficient in
             translating design concepts into responsive and engaging web
             applications using modern web technologies. Adept at collaborating
             with cross-functional teams to deliver high-quality software
