@@ -18,7 +18,7 @@ export const AppLayout = ({ children }) => {
     }
   };
   return (
-    <div className="h-full max-h-screen max-w-screen transition-all">
+    <div className="h-screen max-h-screen max-w-screen bg-red-500">
       <div className="p-3 font-mono bg-gradient-to-t from-slate-500 to-slate-700">
         <div className="m-2 flex justify-between">
           <Image
@@ -66,9 +66,9 @@ export const AppLayout = ({ children }) => {
           </Link>
           <Link
             className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
-            href="/resources"
+            href="/courses"
           >
-            Resources
+            Courses
           </Link>
           <Link
             className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
