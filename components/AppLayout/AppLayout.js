@@ -18,8 +18,8 @@ export const AppLayout = ({ children }) => {
     }
   };
   return (
-    <div className="h-screen max-h-screen max-w-screen bg-red-500">
-      <div className="p-3 font-mono bg-gradient-to-t from-slate-500 to-slate-700">
+    <div className="h-screen max-h-screen max-w-screen ">
+      <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700">
         <div className="m-2 flex justify-between">
           <Image
             width={100}
@@ -29,7 +29,7 @@ export const AppLayout = ({ children }) => {
           />
 
           {/* TOGGLE BUTTON  */}
-          <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in self-end">
+          <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in self-end">
             <input
               ref={toggleRef}
               onChange={handleChange}
@@ -39,10 +39,10 @@ export const AppLayout = ({ children }) => {
               class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
             />
             <label
-              for="toggle"
+              htmlFor="toggle"
               class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
             ></label>
-            <label for="toggle" class="text-xs text-yellow-400">
+            <label htmlFor="toggle" class="text-xs text-yellow-400">
               Dark Mode
             </label>
           </div>

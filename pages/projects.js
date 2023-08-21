@@ -7,16 +7,19 @@ import { AppLayout } from "../components/AppLayout";
 export default function Projects() {
   return (
     <main
-      className={`flex justify-center items-center w-full h-screen overflow-hidden relative bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col`}
+      className={`flex justify-center items-center w-full h-screen overflow-hidden relative bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950`}
     >
-      <div className="font-bold text-5xl">
-      <div className="mb-20">
-      <h1>Sorry, this page is being redesigned &#127912;</h1>
-      <br/>
-      <h1>Please comeback soon to see the new content!</h1>
-      </div>
+      <div className="font-bold text-5xl text-center leading-loose">
+        <div className="mb-20">
+          <h1>Projects Page</h1>
+          <h1>Sorry, this page is being redesigned &#127912;</h1>
+          <h1>Please comeback soon to see the new content!</h1>
+        </div>
 
-      <div class="max-w-2xl mx-auto">
+        <h2 className="font-bold text-5xl text-center mb-5 underline">
+          Devle mobile App
+        </h2>
+        <div class="max-w-2xl mx-auto">
           <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <h3 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
               Devle App
@@ -27,7 +30,8 @@ export default function Projects() {
             </p>
             <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
               <a
-                href="https://apps.apple.com/za/app/devle/id1659893831" target="_blank"
+                href="https://apps.apple.com/za/app/devle/id1659893831"
+                target="_blank"
                 class="w-full sm:w-auto flex bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
               >
                 <svg
@@ -53,7 +57,8 @@ export default function Projects() {
                 </div>
               </a>
               <a
-                href="https://play.google.com/store/apps/details?id=com.tacticalDevs.devle" target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.tacticalDevs.devle"
+                target="_blank"
                 class="w-full sm:w-auto flex bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
               >
                 <svg
@@ -81,7 +86,7 @@ export default function Projects() {
             </div>
           </div>
         </div>
-     </div>
+      </div>
     </main>
   );
 }

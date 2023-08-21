@@ -7,8 +7,8 @@ import ReactShorts from "../public/React-Shorts-YouTube-Thumbnail.png";
 
 export default function Courses() {
   return (
-    <main className="w-full h-full md:flex-col bg-white dark:bg-slate-900">
-      <h1 className=" text-slate-900 text-5xl p-10 font-bold dark:text-white">Free YouTube Courses</h1>
+    <main className="w-full h-full md:flex-col bg-white dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 bg-gradient-to-r from-indigo-500 to-indigo-800">
+      <h1 className="underline text-white text-5xl p-10 font-bold dark:text-white">Free Courses</h1>
 
       {/* CARD  */}
       <div className="font-bold text-5xl mt-5 h-96">
