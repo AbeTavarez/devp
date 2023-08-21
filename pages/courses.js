@@ -39,7 +39,7 @@ export default function Courses() {
                 href="https://www.youtube.com/watch?v=Og6SncuVLx8&list=PLs2MFTFGx8_4knGrUEa1ZwUEEf9MmodVN"
                 className="block mt-10 w-full px-4 py-3 font-medium tracking-wide text-center capitalize transition-colors duration-300 transform bg-slate-800 rounded-[14px] hover:bg-slate-500 focus:outline-none focus:ring focus:ring-teal-300 focus:ring-opacity-80"
               >
-                View on You Tube
+                View on YouTube
               </a>
               <a
                 target="_blank"
