@@ -59,7 +59,7 @@ export default function Home() {
               Welcome, I&apos;m glad you made it here! My name is Abraham E.
               Tavarez. I love movies, video games, coding and on my days off I
               do all kinds of sports. Grew up in New York City, and I currently
-              live in Orlando Florida. What can I say, I enjoy the hot wether
+              live in Orlando, Florida. What can I say? I enjoy the hot weather
               and the beautiful beaches here.
             </p>
           </div>
