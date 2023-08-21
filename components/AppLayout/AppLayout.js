@@ -52,7 +52,7 @@ export const AppLayout = ({ children }) => {
           <h3 className="mb-1 text-xl">Abraham Tavarez</h3>
          <nav className="flex justify-evenly items-center">
          <Link
-            className="font-bold border-b p-1 px-5 py-2 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
+            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
             href="/"
           >
             Home
