@@ -19,7 +19,8 @@ export const AppLayout = ({ children }) => {
   };
   return (
     <div className="h-screen max-h-screen max-w-screen ">
-      <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700">
+      <div className="p-3 font-mono bg-indigo-500  dark:from-slate-500 dark:to-slate-700">
+      {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
         <div className="m-2 flex justify-between">
           <Image
             width={100}

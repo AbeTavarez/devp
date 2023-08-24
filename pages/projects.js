@@ -9,14 +9,14 @@ export default function Projects() {
     <main
       className={`flex justify-center items-center w-full h-screen overflow-hidden relative bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950`}
     >
-      <div className="font-bold text-5xl text-center leading-loose">
+      <div className="font-bold text-2xl text-center leading-loose">
         <div className="mb-20">
           <h1>Projects Page</h1>
           <h1>Sorry, this page is being redesigned &#127912;</h1>
           <h1>Please comeback soon to see the new content!</h1>
         </div>
 
-        <h2 className="font-bold text-5xl text-center mb-5 underline">
+        <h2 className="font-bold text-3xl text-center mb-5 underline">
           Devle mobile App
         </h2>
         <div class="max-w-2xl mx-auto">

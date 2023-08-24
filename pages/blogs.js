@@ -1,17 +1,34 @@
 import Image from "next/image";
 import { Inter } from "next/font/google";
 import { AppLayout } from "../components/AppLayout";
+import {blogs} from '../blogsData/blogs';
+import BlogItem from '../components/BlogItem'
 
 // const inter = Inter({ subsets: ["latin"] });
 
 export default function Blogs() {
   return (
-    <section class="bg-white dark:bg-gray-900">
+    <section class="bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950">
     <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl dark:text-white">From the blog</h1>
+        <h1 class="text-3xl font-semibold text-gray-800 capitalize lg:text-4xl text-white">
+            Blogs
+        </h1>
+        <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+            {blogs && (
+                blogs.map(blog => <BlogItem key={blog.postId} {...blog} />)
+            )}
+        </div>
+    </div>
+</section>
+  );
+}
 
-        <div class="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-            <div class="lg:flex">
+Blogs.getLayout = function getLayout(page, pageProps) {
+  return <AppLayout {...pageProps}>{page}</AppLayout>;
+};
+
+
+{/* <div class="lg:flex">
                 <img class="object-cover w-full h-56 rounded-lg lg:w-64" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt=""/>
 
                 <div class="flex flex-col justify-between py-6 lg:mx-6">
@@ -81,13 +98,4 @@ export default function Blogs() {
                     
                     <span class="text-sm text-gray-500 dark:text-gray-300">On: 20 October 2019</span>
                 </div>
-            </div>
-        </div>
-    </div>
-</section>
-  );
-}
-
-Blogs.getLayout = function getLayout(page, pageProps) {
-  return <AppLayout {...pageProps}>{page}</AppLayout>;
-};
+            </div> */}
