@@ -19,8 +19,8 @@ export const AppLayout = ({ children }) => {
   };
   return (
     <div className="h-screen max-h-screen max-w-screen ">
-      <div className="p-3 font-mono bg-indigo-500  dark:from-slate-500 dark:to-slate-700">
-      {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
+      <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
+        {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
         <div className="m-2 flex justify-between">
           <Image
             width={100}
@@ -50,43 +50,51 @@ export const AppLayout = ({ children }) => {
         </div>
 
         <nav className="mt-10">
-          <h3 className="mb-1 text-xl">Abraham Tavarez</h3>
-         <nav className="flex justify-evenly items-center">
-         <Link
-            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
-            href="/"
-          >
-            Home
-          </Link>
+          <h3 className="mb-1 text-xl text-white dark:text-black">
+            Abraham Tavarez
+          </h3>
+          <nav className="flex justify-evenly items-center">
+            <Link
+              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              href="/"
+            >
+              Home
+            </Link>
 
-          <Link
-            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
-            href="/projects"
-          >
-            Projects
-          </Link>
-          <Link
-            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
-            href="/courses"
-          >
-            Courses
-          </Link>
-          <Link
-            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
-            href="/blogs"
-          >
-            Blogs
-          </Link>
-          <Link
-            className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 dark: transition-all"
-            href="/contact"
-          >
-            Contact
-          </Link>
-         </nav>
+            <Link
+              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              href="/projects"
+            >
+              Projects
+            </Link>
+            <Link
+              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              href="/courses"
+            >
+              Courses
+            </Link>
+            <Link
+              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              href="/blogs"
+            >
+              Blogs
+            </Link>
+            <Link
+              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              href="/contact"
+            >
+              Contact
+            </Link>
+          </nav>
         </nav>
       </div>
       {children}
+      {/* <footer className="p-10 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
+        <div className="text-white">
+          <h6>Abraham Tavarez</h6>
+          <h5>All rights reserved | {Date()}</h5>
+        </div>
+      </footer> */}
     </div>
   );
 };

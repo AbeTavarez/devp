@@ -11,10 +11,10 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className={`sm:grid grid-cols-[0.5fr_2fr] grid-rows-2-[25%_75%] p-5 w-full h-full  bg-gradient-to-r from-indigo-500 to-indigo-800 text-black  dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 text-white`}
+      className={`sm:grid grid-cols-[0.5fr_2fr] grid-rows-2-[25%_75%] w-full h-full  bg-gradient-to-r from-indigo-500 to-indigo-800  dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 text-white`}
     >
       {/* BACKGROUND SECTION  */}
-      <section className="w-auto  px-2">
+      <section className="w-auto px-3">
         <h1 className="text-2xl font-bold mb-5 underline">Background</h1>
 
         <h1 className="text-xl font-bold mb-5">I.T. Information Technology</h1>
@@ -42,7 +42,7 @@ export default function Home() {
       </section>
 
       {/* WHOAMI SECTION  */}
-      <section className="max-w-5xl  p-10">
+      <section className="max-w-5xl p-5">
         <h1 className="text-2xl font-bold my-10 underline">
           WhoAmI
         </h1>
@@ -112,8 +112,8 @@ export default function Home() {
       </section>
 
       {/* RECENT PROJECTS SECTION  */}
-      <section className="col-span-2 mt-10 p-5">
-        <h3 className="text-3xl mb-10 font-bold underline text-center">Recent Projects</h3>
+      <section className="col-span-2">
+        <h3 className="text-3xl mt-10 font-bold underline text-center">Recent Projects</h3>
 
         <div class="max-w-2xl mx-auto">
           <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -180,6 +180,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+        
       </section>
     </main>
   );
