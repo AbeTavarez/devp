@@ -4,7 +4,8 @@ import { AppLayout } from "../../components/AppLayout";
 import Link from "next/link";
 
 export default function Post({post}) {
-    const {title, postContent, img} = post;
+    console.log(post);
+    const {postContent, img} = post;
     return (
         <div className="h-full">
             <div className="max-w-screen-sm mx-auto bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 p-5 mt-10">
