@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function Post({post}) {
     console.log(post);
-    const {postContent, img} = post;
     return (
         <div className="h-full">
             <div className="max-w-screen-sm mx-auto bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 p-5 mt-10">
@@ -14,14 +13,14 @@ export default function Post({post}) {
                </div>
                 <Image 
                 className="object-cover w-full h-56 rounded-lg lg:w-100"
-                src={img}
+                src={post.img}
                 alt=""
                 height={244}
                 width={'1000'}
                 />
 
            <div className="mt-6 p-2 text-lg leading-8">
-           <div dangerouslySetInnerHTML={{__html: postContent}}/>
+           <div dangerouslySetInnerHTML={{__html: post.postContent}}/>
            </div>
             </div>
 
