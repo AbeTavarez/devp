@@ -22,13 +22,9 @@ export const AppLayout = ({ children }) => {
       <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
         {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
         <div className="m-2 flex justify-between">
-          <Image
-            width={100}
-            src={MyPhoto}
-            alt="my photo"
-            className="rounded-full hover:scale-75 hover:skew-x-12 transition-all border-4 border-white mr-5 object-cover shadow-xl  shadow-zinc-950"
-          />
-
+          <h3 className="mb-1 text-xl text-white dark:text-black">
+            Abraham Tavarez
+          </h3>
           {/* TOGGLE BUTTON  */}
           <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in self-end">
             <input
@@ -50,9 +46,6 @@ export const AppLayout = ({ children }) => {
         </div>
 
         <nav className="mt-10">
-          <h3 className="mb-1 text-xl text-white dark:text-black">
-            Abraham Tavarez
-          </h3>
           <nav className="flex justify-evenly items-center">
             <Link
               className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
