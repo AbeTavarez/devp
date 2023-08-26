@@ -88,21 +88,21 @@ export default function Home() {
               <Link
                 href="https://www.linkedin.com/in/abrahametavarez/"
                 target="_blank"
-                className="hover:text-slate-500 "
+                className="hover:text-amber-500 "
               >
                 <FaLinkedin size={"38"} />
               </Link>
               <Link
                 href="https://github.com/AbeTavarez"
                 target="_blank"
-                className="hover:text-slate-500 "
+                className="hover:text-amber-500 "
               >
                 <FaGithub size={"38"} />
               </Link>
               <Link
                 href="https://www.youtube.com/channel/UCsKM1yW-g1VRsC1kcspXegQ"
                 target="_blank"
-                className="hover:text-slate-500"
+                className="hover:text-amber-500"
               >
                 <FaYoutube size={"38"} />
               </Link>

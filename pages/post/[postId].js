@@ -8,8 +8,8 @@ export default function Post(props) {
     return (
         <div className="h-full">
             <div className="max-w-screen-sm mx-auto bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 p-5 mt-10">
-               <div className="my-10 underline w-20 px-5 text-center">
-               <Link href="/blogs" className="">back</Link>
+               <div className="my-10 underline w-20 px-5 text-center hover:scale-125 font-bold tracking-wide">
+               <Link href="/blogs">back</Link>
                </div>
                 <Image 
                 className="object-cover w-full h-56 rounded-lg lg:w-100"

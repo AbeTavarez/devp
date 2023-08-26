@@ -2,8 +2,11 @@ import { useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MyPhoto from "../../public/efren-tavarez-aws-nyc-Abraham-Tavarez-1000x978.png";
+import { useRouter } from "next/router";
 
 export const AppLayout = ({ children }) => {
+  const router = useRouter(); // router
+
   // handle dark mode
   const toggleRef = useRef();
   const handleChange = () => {
@@ -17,6 +20,7 @@ export const AppLayout = ({ children }) => {
       toggleRef.current.style.right = "";
     }
   };
+
   return (
     <div className="h-screen max-h-screen max-w-screen ">
       <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
@@ -39,7 +43,7 @@ export const AppLayout = ({ children }) => {
               htmlFor="toggle"
               class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
             ></label>
-            <label htmlFor="toggle" class="text-xs text-yellow-400">
+            <label htmlFor="toggle" class="text-xs text-amber-500 font-bold">
               Dark Mode
             </label>
           </div>
@@ -48,32 +52,42 @@ export const AppLayout = ({ children }) => {
         <nav className="mt-10">
           <nav className="flex justify-evenly items-center">
             <Link
-              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              className={`nav-link ${
+                router.pathname === "/" ? "text-amber-500 dark:text-white" : "text-white"
+              } `}
               href="/"
             >
               Home
             </Link>
 
             <Link
-              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              className={`nav-link ${
+                router.pathname === "/projects" ? "text-amber-500 dark:text-white" : "text-white"
+              } `}
               href="/projects"
             >
               Projects
             </Link>
             <Link
-              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              className={`nav-link ${
+                router.pathname === "/courses" ? "text-amber-500 dark:text-white" : "text-white"
+              } `}
               href="/courses"
             >
               Courses
             </Link>
             <Link
-              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              className={`nav-link ${
+                router.pathname === "/blogs" ? "text-amber-500 dark:text-white" : "text-white"
+              } `}
               href="/blogs"
             >
               Blogs
             </Link>
             <Link
-              className="font-bold border-b p-1 hover:scale-125 hover:text-slate-900 mt-2 text-white dark:text-slate-900 transition-all"
+              className={`nav-link ${
+                router.pathname === "/contact" ? "text-amber-500 dark:text-white" : "text-white"
+              } `}
               href="/contact"
             >
               Contact
