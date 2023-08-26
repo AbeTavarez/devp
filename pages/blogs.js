@@ -10,7 +10,7 @@ export default function Blogs() {
   return (
     <section class="bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 h-full">
     <div class="container px-6 py-10 mx-auto">
-        <h1 class="text-3xl font-semibold  capitalize lg:text-4xl text-white">
+        <h1 class="text-3xl font-semibold  capitalize lg:text-4xl text-white underline">
             Blogs
         </h1>
         <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-2">

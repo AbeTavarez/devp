@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className={`sm:grid grid-cols-[0.5fr_2fr] grid-rows-2-[25%_75%] w-full h-full  bg-gradient-to-r from-indigo-500 to-indigo-800  dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 text-white`}
+      className={` sm:grid grid-cols-[0.5fr_2fr] grid-rows-2-[25%_75%] w-full h-full  bg-gradient-to-r from-indigo-500 to-indigo-800  dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 text-white p-5`}
     >
       {/* BACKGROUND SECTION  */}
       <section className="w-auto px-3">
