@@ -66,6 +66,8 @@
   .nav-link {
    @apply font-bold border-b p-1 hover:scale-125 hover:text-amber-300 mt-2 text-white dark:text-slate-900 transition-all
   }
+
+ 
 }
 
 @media (prefers-color-scheme: dark) {

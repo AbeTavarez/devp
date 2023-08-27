@@ -26,16 +26,16 @@ export const AppLayout = ({ children }) => {
     <div className="h-full max-h-screen max-w-screen ">
       <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
         {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
-        <div className="m-2 flex justify-between items-center justify-items-center content-center">
-          {/* <div className="bg-red-500"> */}
+        <div className="flex justify-between items-center justify-items-center content-center ">
+          <div className="max-h-45">
           <Image 
             src={Logo}
-            className="w-50 h-50"
+            className=""
             width={200}
             height={200}
             alt='logo image'
           />
-          {/* </div> */}
+          </div>
           {/* TOGGLE BUTTON  */}
           <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
             <input
@@ -56,13 +56,13 @@ export const AppLayout = ({ children }) => {
           </div>
         </div>
 
-        <nav className="mt-10 flex  justify-end">
+        <nav className="flex  justify-end">
           {/* DROPDOWM MENU  */}
           <div class="relative inline-block text-left">
             <div>
               <button
                 type="button"
-                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
+                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#5EC9CC] px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
                 id="menu-button"
                 aria-expanded="true"
                 aria-haspopup="true"
@@ -96,7 +96,7 @@ export const AppLayout = ({ children }) => {
   --> */}
             {showDropDown && (
               <div
-                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none"
+                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
                 role="menu"
                 aria-orientation="vertical"
                 aria-labelledby="menu-button"
@@ -109,7 +109,7 @@ export const AppLayout = ({ children }) => {
                     // className="text-gray-700 block px-4 py-2 text-sm"
                     className={`block px-4 py-2 text-sm ${
                       router.pathname === "/"
-                        ? "text-amber-500 dark:text-white"
+                        ? "text-[#5EC9CC]"
                         : "text-gray-700"
                     } `}
                     role="menuitem"
@@ -123,7 +123,7 @@ export const AppLayout = ({ children }) => {
                     href="/projects"
                     className={`block px-4 py-2 text-sm ${
                       router.pathname === "/projects"
-                        ? "text-amber-500 dark:text-white"
+                        ? "text-[#5EC9CC]"
                         : "text-gray-700"
                     } `}
                     role="menuitem"
@@ -137,7 +137,7 @@ export const AppLayout = ({ children }) => {
                     href="/courses"
                     className={`block px-4 py-2 text-sm ${
                       router.pathname === "/courses"
-                        ? "text-amber-500 dark:text-white"
+                        ? "text-[#5EC9CC]"
                         : "text-gray-700"
                     } `}
                     role="menuitem"
@@ -150,8 +150,8 @@ export const AppLayout = ({ children }) => {
                   <Link
                     href="/blogs"
                     className={`block px-4 py-2 text-sm ${
-                      router.pathname === "/blogss"
-                        ? "text-amber-500 dark:text-white"
+                      router.pathname === "/blogs"
+                        ? "text-[#5EC9CC]"
                         : "text-gray-700"
                     } `}
                     role="menuitem"
@@ -165,7 +165,7 @@ export const AppLayout = ({ children }) => {
                     href="/contact"
                     className={`block px-4 py-2 text-sm ${
                       router.pathname === "/contact"
-                        ? "text-amber-500 dark:text-white"
+                        ? "text-[#5EC9CC]"
                         : "text-gray-700"
                     } `}
                     role="menuitem"
