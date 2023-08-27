@@ -1,9 +1,6 @@
 import Image from "next/image";
-import { Inter } from "next/font/google";
 import { AppLayout } from "../components/AppLayout";
 import ReactShorts from "../public/React-Shorts-YouTube-Thumbnail.png";
-
-// const inter = Inter({ subsets: ["latin"] });
 
 export default function Courses() {
   return (
