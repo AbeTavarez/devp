@@ -95,18 +95,25 @@ export const AppLayout = ({ children }) => {
                   aria-haspopup="true"
                   onClick={() => setShowDropDown(!showDropDown)}
                 >
-                  Navigation
+                  
                   <svg
-                    class="-mr-1 h-5 w-5 text-gray-400"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
+                    // class="-mr-1 h-5 w-5 text-gray-400"
+                    // viewBox="0 0 20 20"
+                    // fill="currentColor"
                     aria-hidden="true"
+                    class="h-6 w-6 text-white hover:text-[#5EC9CC]"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none" 
+                    viewBox="0 0 24 24" 
+                    stroke="currentColor"
                   >
-                    <path
+                    {/* <path
                       fill-rule="evenodd"
                       d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
                       clip-rule="evenodd"
-                    />
+                    /> */}
+
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
                   </svg>
                 </button>
               </div>
