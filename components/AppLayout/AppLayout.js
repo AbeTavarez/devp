@@ -2,7 +2,8 @@ import { useRef, useState } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
-import Logo from '../../public/abraham-tavarez-logo.png';
+import Logo from "../../public/abraham-tavarez-logo-mini.png";
+import { FaLinkedin, FaGithub, FaMoon, FaYoutube } from "react-icons/fa6";
 
 export const AppLayout = ({ children }) => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -26,16 +27,42 @@ export const AppLayout = ({ children }) => {
     <div className="h-full max-h-screen max-w-screen ">
       <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
         {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
-        <div className="flex justify-between items-center justify-items-center content-center ">
-          <div className="max-h-45">
-          <Image 
-            src={Logo}
-            className=""
-            width={200}
-            height={200}
-            alt='logo image'
-          />
+        <div className="flex justify-evenly items-center justify-items-center content-center ">
+          <div className="">
+            <Image
+              src={Logo}
+              className=""
+              width={70}
+              height={20}
+              alt="logo image"
+            />
           </div>
+
+          {/* SOCIAL LINKS  */}
+          <Link
+            href="https://github.com/AbeTavarez"
+            target="_blank"
+            className="hover:text-amber-500 text-white"
+          >
+            <FaGithub size={"20"} />
+          </Link>
+
+          <Link
+            href="https://www.youtube.com/channel/UCsKM1yW-g1VRsC1kcspXegQ"
+            target="_blank"
+            className="hover:text-amber-500 text-white"
+          >
+            <FaYoutube size={"20"} />
+          </Link>
+
+          <Link
+            href="https://www.linkedin.com/in/abrahametavarez/"
+            target="_blank"
+            className="hover:text-amber-500 text-white"
+          >
+            <FaLinkedin size={"20"} />
+          </Link>
+
           {/* TOGGLE BUTTON  */}
           <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
             <input
@@ -46,131 +73,130 @@ export const AppLayout = ({ children }) => {
               id="toggle"
               class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
             />
+
             <label
               htmlFor="toggle"
               class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
             ></label>
-            <label htmlFor="toggle" class="text-xs text-amber-500 font-bold">
-              Dark Mode
-            </label>
+            {/* <label htmlFor="toggle" class="text-xs text-amber-500 font-bold">
+              Dark
+            </label> */}
           </div>
-        </div>
 
-        <nav className="flex  justify-end">
           {/* DROPDOWM MENU  */}
-          <div class="relative inline-block text-left">
-            <div>
-              <button
-                type="button"
-                class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#5EC9CC] px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
-                id="menu-button"
-                aria-expanded="true"
-                aria-haspopup="true"
-                onClick={() => setShowDropDown(!showDropDown)}
-              >
-                Navigation
-                <svg
-                  class="-mr-1 h-5 w-5 text-gray-400"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  aria-hidden="true"
+          <nav className="flex  justify-end">
+            <div class="relative inline-block text-left">
+              <div>
+                <button
+                  type="button"
+                  class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#5EC9CC] px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
+                  id="menu-button"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                  onClick={() => setShowDropDown(!showDropDown)}
                 >
-                  <path
-                    fill-rule="evenodd"
-                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
-                    clip-rule="evenodd"
-                  />
-                </svg>
-              </button>
-            </div>
-            {showDropDown && (
-              <div
-                class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="menu-button"
-                tabindex="-1"
-              >
-                <div class="py-1" role="none">
-                  {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
-                  <Link
-                    href="/"
-                    // className="text-gray-700 block px-4 py-2 text-sm"
-                    className={`block px-4 py-2 text-sm ${
-                      router.pathname === "/"
-                        ? "text-[#5EC9CC]"
-                        : "text-gray-700"
-                    } `}
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-0"
-                    onClick={() => setShowDropDown(!showDropDown)}
+                  Navigation
+                  <svg
+                    class="-mr-1 h-5 w-5 text-gray-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
                   >
-                    Home
-                  </Link>
-                  <Link
-                    href="/projects"
-                    className={`block px-4 py-2 text-sm ${
-                      router.pathname === "/projects"
-                        ? "text-[#5EC9CC]"
-                        : "text-gray-700"
-                    } `}
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-1"
-                    onClick={() => setShowDropDown(!showDropDown)}
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    href="/courses"
-                    className={`block px-4 py-2 text-sm ${
-                      router.pathname === "/courses"
-                        ? "text-[#5EC9CC]"
-                        : "text-gray-700"
-                    } `}
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-2"
-                    onClick={() => setShowDropDown(!showDropDown)}
-                  >
-                    Courses
-                  </Link>
-                  <Link
-                    href="/blogs"
-                    className={`block px-4 py-2 text-sm ${
-                      router.pathname === "/blogs"
-                        ? "text-[#5EC9CC]"
-                        : "text-gray-700"
-                    } `}
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-2"
-                    onClick={() => setShowDropDown(!showDropDown)}
-                  >
-                    Blogs
-                  </Link>
-                  <Link
-                    href="/contact"
-                    className={`block px-4 py-2 text-sm ${
-                      router.pathname === "/contact"
-                        ? "text-[#5EC9CC]"
-                        : "text-gray-700"
-                    } `}
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-2"
-                    onClick={() => setShowDropDown(!showDropDown)}
-                  >
-                    Contact
-                  </Link>
-                 
-                </div>
+                    <path
+                      fill-rule="evenodd"
+                      d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                      clip-rule="evenodd"
+                    />
+                  </svg>
+                </button>
               </div>
-            )}
-          </div>
-          {/* NAVBAR MENU  */}
-          {/* <nav className="flex justify-evenly items-center">
+              {showDropDown && (
+                <div
+                  class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
+                  role="menu"
+                  aria-orientation="vertical"
+                  aria-labelledby="menu-button"
+                  tabindex="-1"
+                >
+                  <div class="py-1" role="none">
+                    {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
+                    <Link
+                      href="/"
+                      // className="text-gray-700 block px-4 py-2 text-sm"
+                      className={`block px-4 py-2 text-sm ${
+                        router.pathname === "/"
+                          ? "text-[#5EC9CC]"
+                          : "text-gray-700"
+                      } `}
+                      role="menuitem"
+                      tabindex="-1"
+                      id="menu-item-0"
+                      onClick={() => setShowDropDown(!showDropDown)}
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="/projects"
+                      className={`block px-4 py-2 text-sm ${
+                        router.pathname === "/projects"
+                          ? "text-[#5EC9CC]"
+                          : "text-gray-700"
+                      } `}
+                      role="menuitem"
+                      tabindex="-1"
+                      id="menu-item-1"
+                      onClick={() => setShowDropDown(!showDropDown)}
+                    >
+                      Projects
+                    </Link>
+                    <Link
+                      href="/courses"
+                      className={`block px-4 py-2 text-sm ${
+                        router.pathname === "/courses"
+                          ? "text-[#5EC9CC]"
+                          : "text-gray-700"
+                      } `}
+                      role="menuitem"
+                      tabindex="-1"
+                      id="menu-item-2"
+                      onClick={() => setShowDropDown(!showDropDown)}
+                    >
+                      Courses
+                    </Link>
+                    <Link
+                      href="/blogs"
+                      className={`block px-4 py-2 text-sm ${
+                        router.pathname === "/blogs"
+                          ? "text-[#5EC9CC]"
+                          : "text-gray-700"
+                      } `}
+                      role="menuitem"
+                      tabindex="-1"
+                      id="menu-item-2"
+                      onClick={() => setShowDropDown(!showDropDown)}
+                    >
+                      Blogs
+                    </Link>
+                    <Link
+                      href="/contact"
+                      className={`block px-4 py-2 text-sm ${
+                        router.pathname === "/contact"
+                          ? "text-[#5EC9CC]"
+                          : "text-gray-700"
+                      } `}
+                      role="menuitem"
+                      tabindex="-1"
+                      id="menu-item-2"
+                      onClick={() => setShowDropDown(!showDropDown)}
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </div>
+            {/* NAVBAR MENU  */}
+            {/* <nav className="flex justify-evenly items-center">
             <Link
               className={`nav-link ${
                 router.pathname === "/"
@@ -223,7 +249,8 @@ export const AppLayout = ({ children }) => {
               Contact
             </Link>
           </nav> */}
-        </nav>
+          </nav>
+        </div>
       </div>
       {children}
       {/* <footer className="p-10 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
