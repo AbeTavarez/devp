@@ -28,7 +28,7 @@ export const AppLayout = ({ children }) => {
       <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
         {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
         <div className="flex justify-evenly items-center justify-items-center content-center ">
-          <div className="">
+          <Link href="/">
             <Image
               src={Logo}
               className=""
@@ -36,13 +36,13 @@ export const AppLayout = ({ children }) => {
               height={20}
               alt="logo image"
             />
-          </div>
+          </Link>
 
           {/* SOCIAL LINKS  */}
           <Link
             href="https://github.com/AbeTavarez"
             target="_blank"
-            className="hover:text-amber-500 text-white"
+            className="hover:text-[#5EC9CC] text-white"
           >
             <FaGithub size={"20"} />
           </Link>
@@ -50,7 +50,7 @@ export const AppLayout = ({ children }) => {
           <Link
             href="https://www.youtube.com/channel/UCsKM1yW-g1VRsC1kcspXegQ"
             target="_blank"
-            className="hover:text-amber-500 text-white"
+            className="hover:text-[#5EC9CC] text-white"
           >
             <FaYoutube size={"20"} />
           </Link>
@@ -58,7 +58,7 @@ export const AppLayout = ({ children }) => {
           <Link
             href="https://www.linkedin.com/in/abrahametavarez/"
             target="_blank"
-            className="hover:text-amber-500 text-white"
+            className="hover:text-[#5EC9CC] text-white"
           >
             <FaLinkedin size={"20"} />
           </Link>
@@ -71,40 +71,39 @@ export const AppLayout = ({ children }) => {
               type="checkbox"
               name="toggle"
               id="toggle"
-              class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+              className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
             />
 
             <label
               htmlFor="toggle"
-              class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+              className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
             ></label>
-            {/* <label htmlFor="toggle" class="text-xs text-amber-500 font-bold">
+            <label htmlFor="toggle" class="text-xs text-[#5EC9CC] font-bold ml-2">
               Dark
-            </label> */}
+            </label>
           </div>
 
           {/* DROPDOWM MENU  */}
           <nav className="flex  justify-end">
-            <div class="relative inline-block text-left">
+            <div className="relative inline-block text-left">
               <div>
                 <button
                   type="button"
-                  class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#5EC9CC] px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
+                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#5EC9CC] px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
                   id="menu-button"
                   aria-expanded="true"
                   aria-haspopup="true"
                   onClick={() => setShowDropDown(!showDropDown)}
                 >
-                  
                   <svg
-                    // class="-mr-1 h-5 w-5 text-gray-400"
+                    // className="-mr-1 h-5 w-5 text-gray-400"
                     // viewBox="0 0 20 20"
                     // fill="currentColor"
                     aria-hidden="true"
-                    class="h-6 w-6 text-white hover:text-[#5EC9CC]"
+                    className="h-6 w-6 text-white hover:text-[#5EC9CC]"
                     xmlns="http://www.w3.org/2000/svg"
-                    fill="none" 
-                    viewBox="0 0 24 24" 
+                    fill="none"
+                    viewBox="0 0 24 24"
                     stroke="currentColor"
                   >
                     {/* <path
@@ -113,19 +112,24 @@ export const AppLayout = ({ children }) => {
                       clip-rule="evenodd"
                     /> */}
 
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+                    />
                   </svg>
                 </button>
               </div>
               {showDropDown && (
                 <div
-                  class="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
+                  className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
                   role="menu"
                   aria-orientation="vertical"
                   aria-labelledby="menu-button"
                   tabindex="-1"
                 >
-                  <div class="py-1" role="none">
+                  <div className="py-1" role="none">
                     {/* <!-- Active: "bg-gray-100 text-gray-900", Not Active: "text-gray-700" --> */}
                     <Link
                       href="/"
