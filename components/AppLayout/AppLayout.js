@@ -5,12 +5,12 @@ import Image from "next/image";
 import Logo from "../../public/abraham-tavarez-logo-mini.png";
 import { FaLinkedin, FaGithub, FaMoon, FaYoutube } from "react-icons/fa6";
 import {useWindowSize} from '../../hooks/useWindowSize';
+import GoogleAnalytics from '../GoogleAnalytics';
 
 export const AppLayout = ({ children }) => {
   const [showDropDown, setShowDropDown] = useState(false);
   const router = useRouter(); // router
   const size = useWindowSize();
-  console.log(size);
 
   // handle dark mode
   const toggleRef = useRef();
@@ -29,7 +29,11 @@ export const AppLayout = ({ children }) => {
   return (
     <div className="h-full max-h-screen max-w-screen">
       <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
-        {/* <div className="p-3 font-mono bg-gradient-to-t from-violet-500 to-violet-700 dark:from-slate-500 dark:to-slate-700"> */}
+
+      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+            <GoogleAnalytics ga_id= 
+            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+          ) : null}
         <div className="flex justify-evenly items-center justify-items-center content-center ">
           <Link href="/">
             <Image
