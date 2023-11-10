@@ -55,7 +55,7 @@ export default function Home() {
           <div className="m-5">
             <p className="font-medium">
               <p>
-                Hello I'm{" "}
+                Hello I&apos;m{" "}
                 <span className="text-[#5EC9CC] font-semibold">Abraham</span> 🐛
               </p>
               I enjoy building and maintaining applications.
