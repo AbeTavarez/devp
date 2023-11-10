@@ -7,12 +7,12 @@ import EmailSubscribeForm from "../components/EmailSubscribeForm";
 
 export default function Courses() {
   return (
-    <main className="w-full h-full bg-white dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 bg-gradient-to-r from-indigo-500 to-indigo-800 p-5">
+    <main className="w-full h-full bg-blk-dark dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 p-5">
       <h1 className="text-white text-3xl p-10 font-bold dark:text-white underline">
         Free Courses
       </h1>
 
-      <section className="flex-col  sm:flex">
+      <section className="flex justify-evenly flex-wrap">
         {/* CARD  */}
         <div className="font-bold text-3xl mt-5 h-full">
           <div className="w-full max-w-md  mx-auto bg-white rounded-3xl shadow-xl overflow-hidden">
@@ -33,7 +33,7 @@ export default function Courses() {
                   </p>
                   <p className="text-[17px] font-bold text-[#0FB478]">FREE</p>
                 </div>
-                <p className="text-[#7C7C80] font-[15px] mt-6">
+                <p className="text-gray-700 font-[15px] mt-6">
                   Beginner friendly React Course! Take a fresh looks at React.
                 </p>
 
@@ -79,7 +79,7 @@ export default function Courses() {
                   </p>
                   <p className="text-[17px] font-bold text-[#0FB478]">FREE</p>
                 </div>
-                <p className="text-[#7C7C80] font-[15px] mt-6">
+                <p className="text-gray-700 font-[15px] mt-6">
                   Develop Cloud Based Applications using Amazon AWS!
                 </p>
 
@@ -104,7 +104,7 @@ export default function Courses() {
         </div>
 
         {/* NEWSLETTER  */} 
-        <MailchimpSubscribe
+        {/* <MailchimpSubscribe
           url={`https://abrahamtavarez.us14.list-manage.com/subscribe/post?u=674102ce360a5a9acf12c3683&amp;id=1c2a5f48e3&amp;f_id=001f9de0f0`}
           render={({ subscribe, status, message }) => (
             <EmailSubscribeForm
@@ -113,7 +113,7 @@ export default function Courses() {
               onValidated={(formData) => subscribe(formData)}
             />
           )}
-        />
+        /> */}
 
         {/* JS and TS Course CARD  */}
         <div className="font-bold text-3xl mt-5 h-full">
@@ -127,7 +127,7 @@ export default function Courses() {
               />
               <div className="p-4 sm:p-6">
                 <p className="font-bold text-gray-700 text-[22px] leading-7 mb-1">
-                  <span className="text-blue-500">React Native: Cross Platform Mobile Development</span>
+                  <span className="text-blue-500">React Native: Mobile Development</span>
                 </p>
                 <div className="flex flex-row">
                   <p className="text-[#3C3C4399] text-[17px] mr-2 line-through">
@@ -135,8 +135,8 @@ export default function Courses() {
                   </p>
                   <p className="text-[17px] font-bold text-[#0FB478]">FREE</p>
                 </div>
-                <p className="text-[#7C7C80] font-[15px] mt-6">
-                  Learn how to develop and deploy you own cross Platform apps for Android and iOS using React Native!
+                <p className="text-gray-700 font-[15px] mt-6">
+                  Launch your own cross mobile apps for Android and iOS using React Native!
                 </p>
 
                 <a
@@ -184,7 +184,7 @@ export default function Courses() {
                   </p>
                   <p className="text-[17px] font-bold text-[#0FB478]">FREE</p>
                 </div>
-                <p className="text-[#7C7C80] font-[15px] mt-6">
+                <p className="text-gray-700 font-[15px] mt-6">
                   Learn fast by converting JavaScript apps to TypeScript apps!
                 </p>
 

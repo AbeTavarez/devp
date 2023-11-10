@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Projects() {
   return (
-    <main className="w-full h-full bg-white dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 bg-gradient-to-r from-indigo-500 to-indigo-800 p-5">
-      <h1 className="text-white text-3xl p-10 font-bold dark:text-white underline">
+    <main className="w-full h-full bg-blk-dark dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 p-5">
+      <h1 className="text-white text-3xl p-10 font-bold dark:text-white font-sans">
         Projects
       </h1>
 
