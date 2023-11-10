@@ -16,7 +16,7 @@ export default function Home() {
       {/* Left SECTION  */}
       <section className="">
         <div className="flex flex-col flex-center content-center items-center">
-          <h1 className="text-2xl font-bold my-10 self-center">
+          <h1 className="text-2xl font-bold my-10 self-center font-sans">
             Abraham E Tavarez
           </h1>
           <Image
@@ -109,14 +109,15 @@ export default function Home() {
             user-centric frontend development.
           </p>
         </section>
-      </section>
+     
 
       {/* RECENT PROJECTS SECTION  */}
       <section className="col-span-2">
-        <h3 className="text-3xl mt-10 font-bold underline text-center">
-          Recent Projects
+        <h3 className="text-3xl mt-10 font-bold">
+          Feature Projects
         </h3>
 
+        {/* MOBILE APP  */}
         <div class="max-w-2xl mx-auto">
           <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
             <h3 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
@@ -184,6 +185,7 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
       </section>
     </main>
   );

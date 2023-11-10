@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "../../public/abraham-tavarez-logo-mini.png";
 import { FaLinkedin, FaGithub, FaMoon, FaYoutube } from "react-icons/fa6";
-import {useWindowSize} from '../../hooks/useWindowSize';
-import GoogleAnalytics from '../GoogleAnalytics';
+import { useWindowSize } from "../../hooks/useWindowSize";
+import GoogleAnalytics from "../GoogleAnalytics";
 
 export const AppLayout = ({ children }) => {
   const [showDropDown, setShowDropDown] = useState(false);
@@ -28,13 +28,11 @@ export const AppLayout = ({ children }) => {
 
   return (
     <div className="h-full max-h-screen max-w-screen">
-      <div className="p-3 font-mono bg-gradient-to-r from-indigo-500 to-fuchsia-600 text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
-
-      {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
-            <GoogleAnalytics ga_id= 
-            {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-          ) : null}
-        <div className="flex justify-evenly items-center justify-items-center content-center ">
+      <div className="p-3 font-mono bg-gradient-to-r from-[#181818] to-[#5EC9CC] text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
+        {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
+          <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+        ) : null}
+        <div className="flex justify-between items-center justify-items-center content-center ">
           <Link href="/">
             <Image
               src={Logo}
@@ -45,33 +43,8 @@ export const AppLayout = ({ children }) => {
             />
           </Link>
 
-          {/* SOCIAL LINKS  */}
-          <Link
-            href="https://github.com/AbeTavarez"
-            target="_blank"
-            className="hover:text-[#5EC9CC] text-white"
-          >
-            <FaGithub size={"20"} />
-          </Link>
-
-          <Link
-            href="https://www.youtube.com/channel/UCsKM1yW-g1VRsC1kcspXegQ"
-            target="_blank"
-            className="hover:text-[#5EC9CC] text-white"
-          >
-            <FaYoutube size={"20"} />
-          </Link>
-
-          <Link
-            href="https://www.linkedin.com/in/abrahametavarez/"
-            target="_blank"
-            className="hover:text-[#5EC9CC] text-white"
-          >
-            <FaLinkedin size={"20"} />
-          </Link>
-
           {/* TOGGLE BUTTON  */}
-          <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in">
+          <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in md:absolute md:left-5 md:top-[100px]">
             <input
               ref={toggleRef}
               onChange={handleChange}
@@ -87,43 +60,43 @@ export const AppLayout = ({ children }) => {
             ></label>
             <label
               htmlFor="toggle"
-              class="text-xs text-[#5EC9CC] font-bold ml-2"
+              class="text-xs text-white font-bold"
             >
-              Dark
+              Slate
             </label>
           </div>
 
           {/* DROPDOWM MENU  */}
-            {/* ********* NAVIGATION BAR AND DROP DOWN **************** */}
-            {size.width < 1200 && (
-          <nav className="flex  justify-end">
-            <div className="relative inline-block text-left">
-              <div>
-                <button
-                  type="button"
-                  className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#5EC9CC] px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
-                  id="menu-button"
-                  aria-expanded="true"
-                  aria-haspopup="true"
-                  onClick={() => setShowDropDown(!showDropDown)}
-                >
-                  <svg
-                    aria-hidden="true"
-                    className="h-6 w-6 text-white hover:text-[#5EC9CC]"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
+          {/* ********* NAVIGATION BAR AND DROP DOWN **************** */}
+          {size.width < 1200 && (
+            <nav className="flex  justify-end">
+              <div className="relative inline-block text-left">
+                <div>
+                  <button
+                    type="button"
+                    className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[#5EC9CC] px-3 py-2 text-sm font-semibold text-white shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 hover:text-black"
+                    id="menu-button"
+                    aria-expanded="true"
+                    aria-haspopup="true"
+                    onClick={() => setShowDropDown(!showDropDown)}
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
-                    />
-                  </svg>
-                </button>
-              </div>
+                    <svg
+                      aria-hidden="true"
+                      className="h-6 w-6 text-white hover:text-[#5EC9CC]"
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
+                      />
+                    </svg>
+                  </button>
+                </div>
                 <div>
                   {showDropDown && (
                     <div
@@ -208,70 +181,66 @@ export const AppLayout = ({ children }) => {
                     </div>
                   )}
                 </div>
-            </div>
-          </nav>
-              )}
-
-        
+              </div>
+            </nav>
+          )}
         </div>
         <div className="mt-10 flex justify-evenly items-center  content-evenly">
-        {
-          size.width > 1200 && (
+          {size.width > 1200 && (
             <nav className="flex justify-evenly content-evenly">
-                  <Link
-                    className={`nav-link ${
-                      router.pathname === "/"
-                        ? "text-[#5EC9CC] dark:text-white"
-                        : "text-white"
-                    } `}
-                    href="/"
-                  >
-                    Home
-                  </Link>
+              <Link
+                className={`nav-link ${
+                  router.pathname === "/"
+                    ? "text-[#5EC9CC] dark:text-white"
+                    : "text-white"
+                } `}
+                href="/"
+              >
+                Home
+              </Link>
 
-                  <Link
-                    className={`nav-link ${
-                      router.pathname === "/projects"
-                        ? "text-[#5EC9CC] dark:text-white"
-                        : "text-white"
-                    } `}
-                    href="/projects"
-                  >
-                    Projects
-                  </Link>
-                  <Link
-                    className={`nav-link ${
-                      router.pathname === "/courses"
-                        ? "text-[#5EC9CC] dark:text-white"
-                        : "text-white"
-                    } `}
-                    href="/courses"
-                  >
-                    Courses
-                  </Link>
-                  <Link
-                    className={`nav-link ${
-                      router.pathname === "/blogs"
-                        ? "text-[#5EC9CC] dark:text-white"
-                        : "text-white"
-                    } `}
-                    href="/blogs"
-                  >
-                    Blogs
-                  </Link>
-                  <Link
-                    className={`nav-link ${
-                      router.pathname === "/contact"
-                        ? "text-[#5EC9CC] dark:text-white"
-                        : "text-white"
-                    } `}
-                    href="/contact"
-                  >
-                    Contact
-                  </Link>
-                </nav>
-          )
-        }
+              <Link
+                className={`nav-link ${
+                  router.pathname === "/projects"
+                    ? "text-[#5EC9CC] dark:text-white"
+                    : "text-white"
+                } `}
+                href="/projects"
+              >
+                Projects
+              </Link>
+              <Link
+                className={`nav-link ${
+                  router.pathname === "/courses"
+                    ? "text-[#5EC9CC] dark:text-white"
+                    : "text-white"
+                } `}
+                href="/courses"
+              >
+                Courses
+              </Link>
+              <Link
+                className={`nav-link ${
+                  router.pathname === "/blogs"
+                    ? "text-[#5EC9CC] dark:text-white"
+                    : "text-white"
+                } `}
+                href="/blogs"
+              >
+                Blogs
+              </Link>
+              <Link
+                className={`nav-link ${
+                  router.pathname === "/contact"
+                    ? "text-[#5EC9CC] dark:text-white"
+                    : "text-white"
+                } `}
+                href="/contact"
+              >
+                Contact
+              </Link>
+            </nav>
+          )}
         </div>
       </div>
       {children}
@@ -284,5 +253,3 @@ export const AppLayout = ({ children }) => {
     </div>
   );
 };
-
-
