@@ -2,8 +2,9 @@ import Image from "next/image";
 import { Inter } from "next/font/google";
 import { AppLayout } from "../components/AppLayout";
 import MyPhoto from "../public/efren-tavarez-aws-nyc-Abraham-Tavarez-1000x978.png";
-import DevlePhoto from "../public/devle-app.jpg";
 import { FaLinkedin, FaGithub, FaYoutube } from "react-icons/fa6";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChalkboardUser } from "@fortawesome/free-solid-svg-icons";
 import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -117,15 +118,54 @@ export default function Home() {
           Feature Projects
         </h3>
 
+        <div className="max-w-2xl mx-auto mb-10">
+        <div class="p-4 w-full text-center  rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
+
+        <img className="w-full h-60 object-cover min-h-0" src='https://images.unsplash.com/photo-1676299081847-824916de030a?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D' alt="open ai logo"/>
+
+        
+          <h3 class="mb-2 text-3xl font-bold text-white dark:text-white">
+            <span className="underline">With Compose</span> Beta Version SAAS
+          </h3>
+          <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+            Chat GPT-4 AI-powered SAAS solution to help you get your tasks done
+            in minutes. <span className="text-white">Created with OpenAI, NextJS, Auth0 and MongoDB.</span>
+          </p>
+          <a
+            href="https://clownfish-app-23htu.ondigitalocean.app/"
+            target="_blank"
+          >
+            <div className="text-md text-white text-center py-4 font-heading bg-slate-900 w-48 rounded hover:cursor-pointer">
+              <FontAwesomeIcon
+                icon={faChalkboardUser}
+                className="text-2xl text-white"
+              />
+              <span className="text-white ml-5 font-sans text-sm font-semibold ">
+                Visit{" "}
+              </span>
+            </div>
+          </a>
+         
+        </div>
+        </div>
+
         {/* MOBILE APP  */}
         <div class="max-w-2xl mx-auto">
-          <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <h3 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
-              Devle App
+          <div class="p-4 w-full text-center  rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
+          <img
+              className="w-full h-60 object-cover min-h-0"
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              alt="open ai logo"
+            />
+            <h3 class="mb-2 text-3xl font-bold text-gray-900 text-white">
+              Devle Mobile App
             </h3>
             <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-              Expand your tech knowledge by having fun with Devle on iOS &
-              Android. Download the app for free today.
+              Keep learning tech while having fun with Devle, FREE on iOS &
+              Android.{" "}
+              <span className="text-white">
+                Created with React Native, JavaScript and Kotlin.
+              </span>
             </p>
             <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
               <a

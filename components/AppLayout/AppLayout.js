@@ -32,7 +32,7 @@ export const AppLayout = ({ children }) => {
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}
-        <div className="flex justify-between items-center justify-items-center content-center ">
+        <div className="flex justify-between items-center justify-items-center content-center">
           <Link href="/">
             <Image
               src={Logo}
@@ -44,7 +44,7 @@ export const AppLayout = ({ children }) => {
           </Link>
 
           {/* TOGGLE BUTTON  */}
-          <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in md:absolute md:left-5 md:top-[100px]">
+          <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in  order-6 self-end">
             <input
               ref={toggleRef}
               onChange={handleChange}
@@ -79,8 +79,8 @@ export const AppLayout = ({ children }) => {
                     aria-expanded="true"
                     aria-haspopup="true"
                     onClick={() => setShowDropDown(!showDropDown)}
-                  >
-                    <svg
+                  > menu
+                    {/* <svg
                       aria-hidden="true"
                       className="h-6 w-6 text-white hover:text-[#5EC9CC]"
                       xmlns="http://www.w3.org/2000/svg"
@@ -94,13 +94,13 @@ export const AppLayout = ({ children }) => {
                         stroke-width="2"
                         d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"
                       />
-                    </svg>
+                    </svg> */}
                   </button>
                 </div>
                 <div>
                   {showDropDown && (
                     <div
-                      className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
+                      className="absolute right-[-150%] z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
                       role="menu"
                       aria-orientation="vertical"
                       aria-labelledby="menu-button"
