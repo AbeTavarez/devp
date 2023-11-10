@@ -9,8 +9,39 @@ export default function Projects() {
         Projects
       </h1>
 
+      {/* BETA PROJECT  */}
       <div class="max-w-2xl mx-auto">
-        <h2 className="font-bold text-3xl text-center mb-5 underline text-green-400">
+        <h2 className="font-bold text-3xl text-center mb-5">
+          Beta SAAS Platform Application{" "}
+          <span className="text-amber-500">(ChatGPT-4)</span>
+        </h2>
+        <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
+          <h3 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
+            With Compose Beta Version
+          </h3>
+          <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
+            Chat GPT-4 AI-powered SAAS solution to help you get your tasks done
+            in minutes. Get high-quality content, without sacrificing your time.
+          </p>
+          <a
+            href="https://clownfish-app-23htu.ondigitalocean.app/"
+            target="_blank"
+          >
+            <div className="text-md text-white text-center py-4 font-heading bg-slate-900 w-48 rounded hover:cursor-pointer">
+              <FontAwesomeIcon
+                icon={faChalkboardUser}
+                className="text-2xl text-white"
+              />
+              <span className="text-white ml-5 font-sans text-sm font-semibold ">
+                With Compose{" "}
+              </span>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="max-w-2xl mx-auto my-20">
+        <h2 className="font-bold text-3xl text-center mb-5">
           Cross Platform Mobile Application{" "}
           <span className="text-amber-500">(iOS & Android)</span>
         </h2>
@@ -78,37 +109,6 @@ export default function Projects() {
               </div>
             </a>
           </div>
-        </div>
-      </div>
-
-      {/* BETA PROJECT  */}
-      <div class="max-w-2xl mx-auto my-52">
-        <h2 className="font-bold text-3xl text-center mb-5 underline text-green-400">
-          Beta SAAS Platform Application{" "}
-          <span className="text-amber-500">(ChatGPT-4)</span>
-        </h2>
-        <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 flex flex-col items-center">
-          <h3 class="mb-2 text-3xl font-bold text-gray-900 dark:text-white">
-            With Compose Beta Version
-          </h3>
-          <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
-            Chat GPT-4 AI-powered SAAS solution to help you get your tasks done
-            in minutes. Get high-quality content, without sacrificing your time.
-          </p>
-          <a
-            href="https://clownfish-app-23htu.ondigitalocean.app/"
-            target="_blank"
-          >
-            <div className="text-md text-white text-center py-4 font-heading bg-slate-900 w-48 rounded hover:cursor-pointer">
-              <FontAwesomeIcon
-                icon={faChalkboardUser}
-                className="text-2xl text-white"
-              />
-              <span className="text-white ml-5 font-sans text-sm font-semibold ">
-                With Compose{" "}
-              </span>
-            </div>
-          </a>
         </div>
       </div>
     </main>

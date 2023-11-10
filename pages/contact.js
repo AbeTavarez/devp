@@ -19,12 +19,12 @@ export default function Contact() {
   }
   return (
     <main
-      className={`w-full h-screen overflow-hidden relative bg-gradient-to-r from-indigo-500 to-indigo-800 md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950`}
+      className={`w-full h-screen overflow-hidden relative bg-blk-dark md:flex-col dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950`}
     >
       <div className="mx-auto max-w-[1920px] px-4 md:px-8 2xl:px-16">
         <div className="md:w-full lg:w-3/5 2xl:w-4/6 flex h-full ltr:md:ml-7 rtl:md:mr-7 flex-col ltr:lg:pl-7 rtl:lg:pr-7">
           <div className="flex pb-7 md:pb-9 mt-7 md:-mt-1.5">
-            <h4 className="text-2xl 2xl:text-3xl font-bold text-heading underline">
+            <h4 className="text-2xl 2xl:text-3xl font-bold text-heading font-sans">
               Get in touch
             </h4>
           </div>
