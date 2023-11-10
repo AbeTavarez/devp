@@ -11,60 +11,89 @@ const inter = Inter({ subsets: ["latin"] });
 export default function Home() {
   return (
     <main
-      className={` sm:grid grid-cols-[0.5fr_2fr] grid-rows-2-[25%_75%] w-full h-full  bg-gradient-to-r from-indigo-500 to-indigo-800  dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 text-white p-5`}
+      className={` sm:grid grid-cols-[0.5fr_2fr] grid-rows-2-[25%_75%] w-full h-full  bg-blk-dark  dark:bg-gradient-to-r dark:from-slate-700 dark:to-slate-950 text-white p-5`}
     >
-      {/* BACKGROUND SECTION  */}
-      <section className="w-auto px-3">
-        <h1 className="text-2xl font-bold mb-5 underline">Background</h1>
+      {/* Left SECTION  */}
+      <section className="">
+        <div className="flex flex-col flex-center content-center items-center">
+          <h1 className="text-2xl font-bold my-10 self-center">
+            Abraham E Tavarez
+          </h1>
+          <Image
+            width={150}
+            src={MyPhoto}
+            alt="my photo"
+            className="rounded-full hover:scale-75 transition-all border-4 border-white mb-1 shadow-xl  shadow-zinc-950  hover:skew-x-12 hover:border-slate-500"
+          />
+          {/* SOCIAL LINKS  */}
 
-        <h1 className="text-xl font-bold mb-5">I.T. Information Technology</h1>
+          <div className="mt-5 flex">
+            <Link
+              href="https://www.linkedin.com/in/abrahametavarez/"
+              target="_blank"
+              className="hover:text-amber-500 hover:animate-bounce transition-all"
+            >
+              <FaLinkedin size={"28"} />
+            </Link>
 
-        <p className="font-medium">
-          Manage and maintain the organization&apos; IT infrastructure,
-          including servers, networks, and systems, to ensure uninterrupted
-          operations and data security
-        </p>
+            <Link
+              href="https://github.com/AbeTavarez"
+              target="_blank"
+              className="hover:text-amber-500 mx-2 hover:animate-bounce transition-all"
+            >
+              <FaGithub size={"28"} />
+            </Link>
+            <Link
+              href="https://www.youtube.com/channel/UCsKM1yW-g1VRsC1kcspXegQ"
+              target="_blank"
+              className="hover:text-amber-500 hover:animate-bounce transition-all"
+            >
+              <FaYoutube size={"28"} />
+            </Link>
+          </div>
 
-        <h1 className="text-xl font-bold my-5">Developer</h1>
+          <div className="m-5">
+            <p className="font-medium">
+              <p>
+                Hello I'm{" "}
+                <span className="text-[#5EC9CC] font-semibold">Abraham</span> 🐛
+              </p>
+              I enjoy building and maintaining applications.
+            </p>
 
-        <p className="font-medium">
-          Develop and maintain responsive web applications using React.js,
-          ensuring seamless user experiences across various devices and browsers
-        </p>
+            <h1 className="text-xl font-bold mb-5 self-start">
+              Cloud and I.T.
+            </h1>
 
-        <h1 className="text-xl font-bold my-5">Tech Instructor</h1>
+            <p className="font-medium">
+              Manage and maintain the organization&apos; IT infrastructure,
+              including servers, networks, and systems, to ensure uninterrupted
+              operations and data security on premises and the cloud.
+            </p>
 
-        <p className="font-medium">
-          Deliver engaging and comprehensive technical training sessions,
-          leveraging in-depth knowledge of the subject matter to effectively
-          convey complex concepts to learners.
-        </p>
+            <h1 className="text-xl font-bold my-5 self-start">Developer</h1>
+
+            <p className="font-medium">
+              Develop and maintain responsive web applications using React and
+              React Native, ensuring seamless user experiences across various
+              devices and browsers.
+            </p>
+
+            <h1 className="text-xl font-bold my-5 self-start">
+              Tech Instructor
+            </h1>
+
+            <p className="font-medium">
+              Deliver engaging and comprehensive technical training sessions,
+              leveraging in-depth knowledge of the subject matter to effectively
+              convey complex concepts to learners.
+            </p>
+          </div>
+        </div>
       </section>
 
       {/* WHOAMI SECTION  */}
       <section className="max-w-5xl p-5">
-        <h1 className="text-2xl font-bold my-10 underline">
-          WhoAmI
-        </h1>
-        <div className="">
-          <Image
-            width={200}
-            src={MyPhoto}
-            alt="my photo"
-            className="rounded-full hover:scale-75 transition-all border-4 border-white  mr-3 mb-1  float-left shadow-xl  shadow-zinc-950  hover:skew-x-12 hover:border-slate-500"
-          />
-
-          <div className="m-5">
-            <p className="font-medium mt-10">
-              Welcome, I&apos;m glad you made it here! My name is Abraham E.
-              Tavarez. I love movies, video games, coding and on my days off I
-              do all kinds of sports. Grew up in New York City, and I currently
-              live in Orlando, Florida. What can I say? I enjoy the hot weather
-              and the beautiful beaches here.
-            </p>
-          </div>
-        </div>
-
         <section className="">
           <h2 className="text-xl font-bold my-1">Professional Summary</h2>
           <p className="font-medium">
@@ -79,41 +108,14 @@ export default function Home() {
             creativity and technical expertise to drive innovation and elevate
             user-centric frontend development.
           </p>
-
-          <div>
-            <h2 className="mt-10 font-bold text-xl text-center">
-              Social Links
-            </h2>
-            <div className="mt-5 flex justify-evenly hover:animate-bounce transition-all">
-              <Link
-                href="https://www.linkedin.com/in/abrahametavarez/"
-                target="_blank"
-                className="hover:text-amber-500 "
-              >
-                <FaLinkedin size={"38"} />
-              </Link>
-              <Link
-                href="https://github.com/AbeTavarez"
-                target="_blank"
-                className="hover:text-amber-500 "
-              >
-                <FaGithub size={"38"} />
-              </Link>
-              <Link
-                href="https://www.youtube.com/channel/UCsKM1yW-g1VRsC1kcspXegQ"
-                target="_blank"
-                className="hover:text-amber-500"
-              >
-                <FaYoutube size={"38"} />
-              </Link>
-            </div>
-          </div>
         </section>
       </section>
 
       {/* RECENT PROJECTS SECTION  */}
       <section className="col-span-2">
-        <h3 className="text-3xl mt-10 font-bold underline text-center">Recent Projects</h3>
+        <h3 className="text-3xl mt-10 font-bold underline text-center">
+          Recent Projects
+        </h3>
 
         <div class="max-w-2xl mx-auto">
           <div class="p-4 w-full text-center bg-white rounded-lg border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700">
@@ -126,7 +128,8 @@ export default function Home() {
             </p>
             <div class="justify-center items-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
               <a
-                href="https://apps.apple.com/za/app/devle/id1659893831" target="_blank"
+                href="https://apps.apple.com/za/app/devle/id1659893831"
+                target="_blank"
                 class="w-full sm:w-auto flex bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
               >
                 <svg
@@ -152,7 +155,8 @@ export default function Home() {
                 </div>
               </a>
               <a
-                href="https://play.google.com/store/apps/details?id=com.tacticalDevs.devle" target="_blank"
+                href="https://play.google.com/store/apps/details?id=com.tacticalDevs.devle"
+                target="_blank"
                 class="w-full sm:w-auto flex bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 dark:bg-gray-700 dark:hover:bg-gray-600 dark:focus:ring-gray-700"
               >
                 <svg
@@ -180,7 +184,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
       </section>
     </main>
   );
