@@ -28,7 +28,7 @@ export const AppLayout = ({ children }) => {
 
   return (
     <div className="h-full max-h-screen max-w-screen">
-      <div className="p-3 font-mono bg-gradient-to-r from-[#181818] to-[#5EC9CC] text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
+      <div className=" p-3 font-mono bg-gradient-to-r from-[#181818] to-[#5EC9CC] text-black dark:bg-gradient-to-r  dark:from-slate-500 dark:to-slate-700">
         {process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS ? (
           <GoogleAnalytics ga_id={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
         ) : null}
@@ -42,34 +42,10 @@ export const AppLayout = ({ children }) => {
               alt="logo image"
             />
           </Link>
-
-          {/* TOGGLE BUTTON  */}
-          <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in  order-6 self-end">
-            <input
-              ref={toggleRef}
-              onChange={handleChange}
-              type="checkbox"
-              name="toggle"
-              id="toggle"
-              className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
-            />
-
-            <label
-              htmlFor="toggle"
-              className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
-            ></label>
-            <label
-              htmlFor="toggle"
-              class="text-xs text-white font-bold"
-            >
-              Slate
-            </label>
-          </div>
-
           {/* DROPDOWM MENU  */}
           {/* ********* NAVIGATION BAR AND DROP DOWN **************** */}
-          {size.width < 1200 && (
-            <nav className="flex  justify-end">
+          {size.width < 1100 && (
+            <nav className="flex">
               <div className="relative inline-block text-left">
                 <div>
                   <button
@@ -79,7 +55,9 @@ export const AppLayout = ({ children }) => {
                     aria-expanded="true"
                     aria-haspopup="true"
                     onClick={() => setShowDropDown(!showDropDown)}
-                  > menu
+                  >
+                    {" "}
+                    menu
                     {/* <svg
                       aria-hidden="true"
                       className="h-6 w-6 text-white hover:text-[#5EC9CC]"
@@ -100,7 +78,7 @@ export const AppLayout = ({ children }) => {
                 <div>
                   {showDropDown && (
                     <div
-                      className="absolute right-[-150%] z-10 mt-2 w-56 origin-top-right rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
+                      className="absolute right-[-0%] z-10 mt-2 w-56 origin-top-right rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none bg-white"
                       role="menu"
                       aria-orientation="vertical"
                       aria-labelledby="menu-button"
@@ -186,7 +164,7 @@ export const AppLayout = ({ children }) => {
           )}
         </div>
         <div className="mt-10 flex justify-evenly items-center  content-evenly">
-          {size.width > 1200 && (
+          {size.width > 1100 && (
             <nav className="flex justify-evenly content-evenly">
               <Link
                 className={`nav-link ${
@@ -241,6 +219,27 @@ export const AppLayout = ({ children }) => {
               </Link>
             </nav>
           )}
+        </div>
+        {/* TOGGLE BUTTON  */}
+        <div className="flex flex-end">
+          <div className="relative inline-block w-10 mr-2 align-middle select-none transition duration-200 ease-in  order-6 self-end ml-auto">
+            <input
+              ref={toggleRef}
+              onChange={handleChange}
+              type="checkbox"
+              name="toggle"
+              id="toggle"
+              className="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"
+            />
+
+            <label
+              htmlFor="toggle"
+              className="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"
+            ></label>
+            <label htmlFor="toggle" className="text-xs text-white font-bold">
+              Slate
+            </label>
+          </div>
         </div>
       </div>
       {children}
